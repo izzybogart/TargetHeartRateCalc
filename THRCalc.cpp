@@ -45,9 +45,6 @@ string HeartRates::get_LastName() const {
 }
 int HeartRates::get_day() const {
         return dayOFbirth;
-        }
-int HeartRates::get_day() const {
-        return dayOFbirth;
 }
 int HeartRates::get_month() const {
         return monthOFbirth;
