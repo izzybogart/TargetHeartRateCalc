@@ -66,7 +66,7 @@ int HeartRates::getAge() {
         return age;
 }
 
-int HeartRate::getMaxiumumHeartRate(int age) {
+int HeartRate::getMaximumHeartRate(int age) {
         int maxHR = 220 - age;
         return maxHR;
 }
