@@ -66,12 +66,13 @@ int HeartRates::getAge() {
         return age;
 }
 
-int HeartRate::getMaximumHeartRate(int age) {
+int HeartRate::getMaxiumumHeartRate(int age) {
         int maxHR = 220 - age;
         return maxHR;
 }
 
 void HeartRate::getTargetHeartRate(int maxHR) {
+        cout<<"Maximum Heart Rate: "<<maxHR<<endl;
         cout<<"Target Heart Rate: "<<maxHR*0.5<<"-"<<maxHR *0.85<<" bpm."<<endl;
 }
 
@@ -79,5 +80,4 @@ void displayData(int age) const {
         cout<<"First Name: "<<get_FirstName()<<"\nLastName: "<<get_LastName()<<endl;
         cout<<"Date of Birth: "<<get_day()<<"/"<<get_month()<<"/"get_year()<<endl;
         cout<<"Age: "<<age<<"years"<<endl;
-        cout<<"Maximum Heart Rate: "<<getMaximumHeartRate(age)<<endl;
 }
