@@ -28,8 +28,8 @@ class HeartRates {
 		//functions
 		int getAge();
 		int getMaximumHeartRate(int);
-		int getTargetHeartRate(int);
-		int displayData(int) const;
+		void getTargetHeartRate(int);
+		void displayData(int) const;
 };
 
 
