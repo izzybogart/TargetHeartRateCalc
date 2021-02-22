@@ -5,11 +5,11 @@ using namespace std;
 //CONSTRUCTORS
 //default
 HeartRates::HeartRates() {
-        first_name = "unknown";
-        last_name = "unknown";
-        day = 0;
-        month = 0;
-        year = 0;
+        firstName = "unknown";
+        lastName = "unknown";
+        dayOFbirth = 0;
+        monthOFbirth = 0;
+        yearOFbirth = 0;
 }
 //initializers
 HeartRates::HeartRates(string first_name, string last_name, int day, int month, int year) {
