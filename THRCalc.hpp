@@ -3,19 +3,20 @@ using namespace std;
 
 class HeartRates {
 	private:
-		string first_name;
-		string last_name;
-		int day;
-		int month;
-		int year;
+		string firstName;
+		string lastName;
+		int dayOFbirth;
+		int monthOFbirth;
+		int yearOFbirth;
 	public:
-		//constructors and destructors
+		//constructors
 		HeartRates();
+		HeartRates(string first_name, string last_name, int day, int month, int year);
 		void FirstName(string first_name);
 		void LastName(string last_name);
-		void day(int day);
-		void month(int month);
-		void year(int year);
+		void DOB(int day);
+		void MOB(int month);
+		void YOB(int year);
 		
 		//get functions
 		string get_FirstName() const;
