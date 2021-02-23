@@ -1,8 +1,10 @@
-FNS = THRCalc.cpp
-MAIN = main.cpp $(FNS)
+CC = g++
+CFLAGS = -I.
+DEPS = THRCalc.hpp
+OBJ = main.o THRCalc.o
 
-all:
-        g++ $(MAIN) -o main
+%.o: %.c $(DEPS)
+        $(CC) -cpp -o $@ $< (CFLAGS)
 
-clean:
-        rm main
+main: main.o THRCalc.o
+        $(CC) -o main main.o THRCalc.o
