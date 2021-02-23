@@ -1,10 +1,25 @@
+IDIR = ../include
 CC = g++
-CFLAGS = -I.
-DEPS = THRCalc.hpp
-OBJ = main.o THRCalc.o
+CFLAGS = -I$(IDIR)
 
-%.o: %.c $(DEPS)
-        $(CC) -cpp -o $@ $< (CFLAGS)
+ODIR = obj
+LDIR = ../lib
 
-main: main.o THRCalc.o
-        $(CC) -o main main.o THRCalc.o
+LIBS = -lm
+
+_DEPS = THRCalc.hpp
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = main.o THRCalc.o
+OBJ = $(patsubst &,$(ODIR)/%,$(_OBJ))
+
+$(ODIR)/%.o: %.cpp $(DEPS)
+        $(CC) -cpp -o $@ $< $(CFLAGS)
+
+main: $(OBJ)
+        $(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+        rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
